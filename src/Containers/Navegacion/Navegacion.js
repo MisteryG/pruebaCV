@@ -22,7 +22,7 @@ class Navegacion extends Component {
     )
     return (
         <div className="listMovies">
-          {valores}
+            {valores}
         </div> 
     )
   }
