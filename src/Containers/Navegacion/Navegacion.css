@@ -1,8 +1,24 @@
-.navbar-right { margin-right: 0px !important}
-.log {
-  margin: 5px 20px 0 0;
+.listMovies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.videos {
-  border: 1px solid red;
-  height:400px;
+
+.listMovies li {
+  list-style-type: none;
+}
+
+.sMovie {
+  position: relative;
+  padding: 30px;
+} 
+
+.sMovie .txtMovie {
+  position: absolute;
+  padding-bottom: 30px;
+  bottom: 4px;
+  text-shadow: 1.5px 1.5px 1.5px black;
+  color: white;
 }

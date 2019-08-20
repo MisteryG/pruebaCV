@@ -12,16 +12,19 @@ class Navegacion extends Component {
 
   render() {
     console.log('mensajes',this.props.groups)
-      return (
-          <nav className="navbar navbar-default">
-            <div className="navbar-header">
-              <Link className="navbar-brand" to="/">ClaroVideo</Link>
-            </div>
-            <ul className="nav navbar-nav navbar-right">
-              <img className="log" alt="" src="https://media.metrolatam.com/2018/06/06/clarovideo01-b06f66ca7ef9055dfdcc23cec7143964-1200x600.jpg"/>
-            </ul>
-          </nav> 
-      )
+    const valores = this.props.groups.map((dat)=>
+      <li className="liMovies" key={dat.id}>
+        <div className="sMovie">
+          <img alt={dat.title} src={dat.image_small} className="lMovie"/>
+          <p className="txtMovie">{dat.title}</p>
+        </div>
+      </li>
+    )
+    return (
+        <div className="listMovies">
+          {valores}
+        </div> 
+    )
   }
 }
 
