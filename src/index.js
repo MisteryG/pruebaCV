@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navegacion from './components/Navegacion/Navegacion.js'
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux';
+import Navegacion from './Containers/Navegacion/Navegacion.js'
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import reducer from './store/reducers/catElementos.js'
 import {BrowserRouter as Router,Route} from 'react-router-dom'
+const store = createStore (reducer, applyMiddleware(thunk))
 
 const Root = () => {
     return (
         <div className="container">
-            <Router>
-                <Route path="/" component={Navegacion}/>
-            </Router>
+            <Provider store={store}>
+                <Router>
+                    <Route path="/" component={Navegacion}/>
+                </Router>
+            </Provider>
         </div>
     )
 }
