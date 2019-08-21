@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import './Navegacion.css'
 import * as actionTypes from '../../store/actions/index.js'
+import filterElements from '../../store/selectors/filterElements.js'
+import Busqueda from '../Busqueda/Busqueda.js'
 
 class Navegacion extends Component {
 
@@ -21,22 +23,37 @@ class Navegacion extends Component {
       </li>
     )
     return (
+      <div className="completo">
+        <Busqueda/>
         <div className="listMovies">
             {valores}
-        </div> 
+        </div>
+      </div>
     )
   }
 }
 
+// const mapStateToProps = (state) => {
+//     return {
+//       groups:state.groups
+//     }
+// }
+
 const mapStateToProps = (state) => {
   return {
-    groups:state.groups
+    groups:filterElements(state)
   }
 }
 
+// const filteredItems = (state) =>{
+//   const totGroups = state.groups;
+//   const findMovWord = state.findMovWord;
+//   return totGroups.filter((item) => item.startsWith(findMovWord)) 
+// }
+
 const mapDispatchToProps = dispatch => {
   return {
-      onLoadElements: () => dispatch(actionTypes.getConsult())
+    onLoadElements: () => dispatch(actionTypes.getConsult())
   }
 }
 

@@ -1,3 +1,4 @@
 export {
-    getConsult
+    getConsult,
+    addWord
 } from './catElementos.js'

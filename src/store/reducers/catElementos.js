@@ -1,6 +1,7 @@
 import * as actionTypes from '../actions/actionTypes.js'
 
 const initialState = {
+    findMovWord:'',
     groups : []
 }
 
@@ -13,7 +14,8 @@ const reducer = (state=initialState, action) => {
             }
         case actionTypes.FIND_MOV:
             return {
-                ...state
+                ...state,
+                findMovWord:action.findMovWord
             }
         default:
             return state
