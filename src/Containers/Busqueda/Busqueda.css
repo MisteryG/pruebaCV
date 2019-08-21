@@ -1,3 +1,9 @@
 .barBusqueda {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barBusqueda input {
+    padding: 10px 30px;
 }
