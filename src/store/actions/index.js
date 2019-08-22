@@ -1,4 +1,5 @@
 export {
     getConsult,
-    addWord
+    addWord,
+    getDataMov
 } from './catElementos.js'

@@ -1,0 +1,17 @@
+.fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    filter: blur(5px);
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor p {
+    color:white;
+}

@@ -4,20 +4,24 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 import Navegacion from './Containers/Navegacion/Navegacion.js'
+import DataMovie from './components/DataMovie/DataMovie.js'
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducers/catElementos.js'
-import {BrowserRouter as Router,Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 const store = createStore (reducer, applyMiddleware(thunk))
 
 const Root = () => {
     return (
         <div className="container">
             <Provider store={store}>
-                <Router>
-                    <Route path="/" component={Navegacion}/>
-                </Router>
+                <BrowserRouter>
+                    <Switch>
+                        <Route path="/" exact component={Navegacion}/>
+                        <Route path="/movie" exact component={DataMovie}/>
+                    </Switch>
+                </BrowserRouter>
             </Provider>
         </div>
     )
