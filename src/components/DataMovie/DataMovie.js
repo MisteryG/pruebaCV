@@ -25,7 +25,7 @@ class DataMovie extends Component {
             var valores = this.state.data.extendedcommon
             var reparto = valores.roles.role.map(data=>
                 <div className="reparto" key={data.id}>
-                    <p>{data.desc}</p>
+                    <p className="puesto">{data.desc}</p>
                     <div className="talentos">{data.talents.talent.map(name =>
                     <p key={name.id}>{name.fullname}</p>)}</div>
                 </div>       
@@ -38,9 +38,6 @@ class DataMovie extends Component {
         }
         
         console.log(this.state.data)
-        // const generos=this.state.data.extendedcommon.genres.genre.forEach((dat)=>
-        //     <p>{dat.desc}</p>
-        // )
         return (
             <div className="contGen">
                 <img className="fondo" src={this.state.data.image_background}/>
@@ -49,10 +46,10 @@ class DataMovie extends Component {
                         <img className="portada" src={this.state.data.image_medium}/>
                     </div>
                     <div className="dataMovie">
-                        <p>{this.state.data.title}</p>
-                        <p>{this.state.data.date}</p>
-                        <p>{this.state.data.duration}</p>
-                        <p>{this.state.data.large_description}</p>
+                        <p className="titulo">{this.state.data.title}</p>
+                        <p className="fecha">{this.state.data.date}</p>
+                        <p className="duracion">{this.state.data.duration}</p>
+                        <p className="descripcion">{this.state.data.large_description}</p>
                         {generos}
                         {reparto}
                     </div>
