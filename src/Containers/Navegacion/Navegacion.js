@@ -45,12 +45,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const filteredItems = (state) =>{
-//   const totGroups = state.groups;
-//   const findMovWord = state.findMovWord;
-//   return totGroups.filter((item) => item.startsWith(findMovWord)) 
-// }
-
 const mapDispatchToProps = dispatch => {
   return {
     onLoadElements: () => dispatch(actionTypes.getConsult())
