@@ -42,16 +42,20 @@ class DataMovie extends Component {
         //     <p>{dat.desc}</p>
         // )
         return (
-            <div className="dataMovie">
+            <div className="contGen">
                 <img className="fondo" src={this.state.data.image_background}/>
                 <div className="contenedor">
-                    <img className="portada" src={this.state.data.image_medium}/>
-                    <p>{this.state.data.title}</p>
-                    <p>{this.state.data.date}</p>
-                    <p>{this.state.data.duration}</p>
-                    <p>{this.state.data.large_description}</p>
-                    {generos}
-                    {reparto}
+                    <div className="imgPortada">
+                        <img className="portada" src={this.state.data.image_medium}/>
+                    </div>
+                    <div className="dataMovie">
+                        <p>{this.state.data.title}</p>
+                        <p>{this.state.data.date}</p>
+                        <p>{this.state.data.duration}</p>
+                        <p>{this.state.data.large_description}</p>
+                        {generos}
+                        {reparto}
+                    </div>
                 </div>
             </div>
         )
