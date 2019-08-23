@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import Navegacion from './Containers/Navegacion/Navegacion.js'
 import DataMovie from './components/DataMovie/DataMovie.js'
 import './index.css';
-// import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducers/catElementos.js'
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
