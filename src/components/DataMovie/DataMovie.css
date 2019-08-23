@@ -22,6 +22,10 @@
     width: 40%;
 }
 
+.butRegresar {
+    width: 40px;
+}
+
 .imgPortada {
     position: relative;
     padding: 10px;
