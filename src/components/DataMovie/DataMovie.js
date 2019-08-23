@@ -23,12 +23,13 @@ class DataMovie extends Component {
 
     render() {
         if (this.state.data.length!==0) {
+            var takeYear=this.state.data.date.split("/").pop()
             var valores = this.state.data.extendedcommon
             var reparto = valores.roles.role.map(data=>
                 <div className="reparto" key={data.id}>
                     <p className="puesto">{data.desc}</p>
                     <div className="talentos">{data.talents.talent.map(name =>
-                    <p key={name.id}>{name.fullname}</p>)}</div>
+                    <p className="listReparto" key={name.id}>{name.fullname}</p>)}</div>
                 </div>       
             )
             var generos = valores.genres.genre.map(data=>
@@ -41,18 +42,20 @@ class DataMovie extends Component {
         console.log(this.state.data)
         return (
             <div className="contGen">
-                <img className="fondo" src={this.state.data.image_background}/>
+                <img alt="" className="fondo" src={this.state.data.image_background}/>
                 <div className="contenedor">
                     <div className="imgPortada">
                         <Link to='/menu/mexico'>
                             <img className="butRegresar" src={regreso}/>
                         </Link>
-                        <img className="portada" src={this.state.data.image_medium}/>
+                        <img alt="" className="portada" src={this.state.data.image_medium}/>
                     </div>
                     <div className="dataMovie">
                         <p className="titulo">{this.state.data.title}</p>
-                        <p className="fecha">{this.state.data.date}</p>
-                        <p className="duracion">{this.state.data.duration}</p>
+                        <div className="dataTime">
+                            <p className="fecha">({takeYear})</p>
+                            <p className="duracion">Duración: {this.state.data.duration}</p>
+                        </div>
                         <p className="descripcion">{this.state.data.large_description}</p>
                         {generos}
                         {reparto}
