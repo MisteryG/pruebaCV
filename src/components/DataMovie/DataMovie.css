@@ -22,6 +22,10 @@
     width: 40%;
 }
 
+.butRegresar {
+    width: 40px;
+}
+
 .imgPortada {
     position: relative;
     padding: 10px;
@@ -45,21 +49,31 @@
     display: flex;
     flex-direction: row;
 }
-/* .dataMovie */
 
 .contenedor p {
     color:white;
     font-size: 15px;
 }
 
-.fecha {
-    margin: 1px;
-    padding: 2px;
-    border: 3px solid white;
+.titulo {
+    font-weight:bold;
+}
+
+.dataTime {
+    display: flex;
+    flex-direction: row;
+}
+
+.duracion {
+    padding-left:5px; 
 }
 
 .puesto {
-    margin: 1px;
-    padding: 2px;
-    border: 3px solid white;
+    font-weight:bold;
+}
+
+.listReparto {
+    text-decoration: underline;
+    padding-left: 4px;
+    padding-right: 4px;
 }

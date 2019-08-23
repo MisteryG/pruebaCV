@@ -16,10 +16,12 @@ class Navegacion extends Component {
     console.log('mensajes',this.props.groups)
     const valores = this.props.groups.map((dat)=>
       <li className="liMovies" key={dat.id}>
-        <div className="sMovie">
-          <img alt={dat.title} src={dat.image_small} className="lMovie"/>
-          <p className="txtMovie">{dat.title}</p>
-        </div>
+          <div className="sMovie">
+          <Link to={`/movie/${dat.title_uri}/${dat.id}`} >
+            <img alt={dat.title} src={dat.image_small} className="lMovie"/>
+            <p className="txtMovie">{dat.title}</p>
+          </Link>
+          </div>
       </li>
     )
     return (
