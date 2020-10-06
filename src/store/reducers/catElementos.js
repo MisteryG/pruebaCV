@@ -2,20 +2,21 @@ import * as actionTypes from '../actions/actionTypes.js'
 
 const initialState = {
     findMovWord:'',
-    groups : []
+    favoritePokemon : [],
+    pokemon: {}
 }
 
 const reducer = (state=initialState, action) => {
     switch (action.type) {
-        case actionTypes.INIT_CAT:
+        case actionTypes.FIND_POKEMON:
             return {
                 ...state,
-                groups:action.groups
+                pokemon:action.data.data
             }
-        case actionTypes.FIND_MOV:
+        case actionTypes.ADD_POKEMON:
             return {
                 ...state,
-                findMovWord:action.findMovWord
+                favoritePokemon:action.value
             }
         default:
             return state

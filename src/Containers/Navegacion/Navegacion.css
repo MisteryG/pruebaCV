@@ -23,3 +23,38 @@
   text-shadow: 1.5px 1.5px 1.5px black;
   color: white;
 }
+
+table {
+  padding: 20px;
+}
+
+table th {
+  text-align: center;
+  border: white 3px solid;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+table td {
+  text-align: center;
+  border: white 1px solid;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.pokemonTable {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-right: 30px;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-right: 30px;
+}

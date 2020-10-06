@@ -16,18 +16,10 @@ You will also see any lint errors in the console.
 
 En la barra de busqueda colocar las letras o nombre a buscar y dar enter, para que se genere el filtro.<br>
 
-Si no se coloca texto en la barra de busqueda y se da enter, se muestran todos los resultados.<br>
-
 ### `instalacion`
-
-Clonar el repositorio por medio de git clone https://github.com/MisteryG/pruebaCV.git.<br>
 
 Instalar los modulos de node por medio de npm i.<br>
 
 ### `redux`
 
-Se cuenta con una store con actions, reducers y selectors.<br>
-
-El componente DataMovie utiliza su state y no la store.<br>
-
-Los contenedores Busqueda y Navegacion hacen uso de la store.<br>
+Se cuenta con una store con actions, reducers.<br>

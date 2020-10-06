@@ -19,14 +19,14 @@ class Busqueda extends Component {
     keyPress(e) {
         if(e.keyCode === 13){
             let valIngresar = e.target.value
-            this.props.onFindElements(valIngresar)
+            this.props.findPokemon(valIngresar)
         }
     }
 
     render () {
         return (
             <div className="barBusqueda">
-                <input type='text' placeholder='Busqueda de titulos'
+                <input type='text' placeholder='Busqueda de pokemones'
                     value={this.state.value} onKeyDown={this.keyPress}
                     onChange={this.handleChange}/>
             </div>
@@ -42,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      onFindElements: (findMovWord) => dispatch(actionTypes.addWord(findMovWord))
+        findPokemon: (findPokemon) => dispatch(actionTypes.findPokemon(findPokemon))
     }
 }
 

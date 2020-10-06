@@ -1,5 +1,4 @@
 export {
-    getConsult,
-    addWord,
-    getDataMov
+    addPokemon,
+    findPokemon
 } from './catElementos.js'
