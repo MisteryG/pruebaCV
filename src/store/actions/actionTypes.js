@@ -1,3 +1,4 @@
 export const ERROR_CONSULTA = 'ERROR_CONSULTA'
 export const FIND_POKEMON = 'FIND_POKEMON'
 export const ADD_POKEMON = 'ADD_POKEMON'
+export const CLEAR_POKEMON = 'CLEAR_POKEMON'

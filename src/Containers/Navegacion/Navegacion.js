@@ -10,7 +10,6 @@ class Navegacion extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {show:false}
   }
 
   render() {
@@ -24,7 +23,6 @@ class Navegacion extends Component {
           border: 2px solid palevioletred;
           border-radius: 3px;
         `;
-      console.log("prueba-redux",this.props.favoritePokemon)
     return (
       <div className="encontrado">
         <Busqueda/>
@@ -46,27 +44,27 @@ class Navegacion extends Component {
                 <td>{height}</td>
                 <td>{base_experience}</td>
                 <td><button onClick={()=>{
-                  let prueba = [] 
-                  if (this.props.favoritePokemon && this.props.favoritePokemon.length!=0) {
-                    prueba=this.props.favoritePokemon
+                  let prueba = []
+                  let i = this.props.favoritePokemon.findIndex(element => element.id==this.props.pokemon.id)
+                  if (i<0){
+                    if (this.props.favoritePokemon && this.props.favoritePokemon.length!=0) {
+                      prueba=this.props.favoritePokemon
+                    }
+                    prueba.push(this.props.pokemon)
+                    this.props.addPokemon(prueba)
                   }
-                  prueba.push(this.props.pokemon)
-                  this.props.addPokemon(prueba)
                 }}>+</button></td>
               </tr>
             </table>
           </div>
         : null
         }
-        {/* {  deberia de ir la funcion para llenar la tabla
-          this.state.show
-          ? <DataPoke/>
-          : null
-        } */}
         <div className="centrado">
-          <Button onClick={()=>{
-            this.setState({show:true})
-          }}>Favoritos</Button>
+          <Link to={`/pokemon/favorito`}>
+            <Button onClick={()=>{
+              this.props.clearPokemon()
+            }}>Favoritos</Button>
+          </Link>
         </div>
       </div>
     )
@@ -82,7 +80,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addPokemon: (addPokemon) => dispatch(actionTypes.addPokemon(addPokemon))
+    addPokemon: (addPokemon) => dispatch(actionTypes.addPokemon(addPokemon)),
+    clearPokemon: () => dispatch(actionTypes.clearPokemon())
   }
 }
 

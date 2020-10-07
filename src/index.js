@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 import Navegacion from './Containers/Navegacion/Navegacion.js'
-import DataMovie from './components/DataMovie/DataMovie.js'
+import DataTable from './components/DataTable/DataTable.js'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducers/catElementos.js'
@@ -18,7 +18,7 @@ const Root = () => {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/menu/mexico" exact component={Navegacion}/>
-                        <Route path="/movie/:title_uri/:id" exact component={DataMovie}/>
+                        <Route path="/pokemon/favorito" exact component={DataTable}/>
                         <Redirect from="/" to="/menu/mexico"/>
                     </Switch>
                 </BrowserRouter>

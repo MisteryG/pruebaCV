@@ -22,6 +22,12 @@ export const addPokemon = (value) => {
     }
 }
 
+export const clearPokemon = () => {
+    return {
+        type:actionTypes.CLEAR_POKEMON
+    }
+}
+
 export const findPokemon = (findPokemon) => {
     return (dispatch) => {
         axios.get('https://pokeapi.co/api/v2/pokemon/'+findPokemon)

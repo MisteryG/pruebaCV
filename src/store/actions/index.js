@@ -1,4 +1,5 @@
 export {
     addPokemon,
-    findPokemon
+    findPokemon,
+    clearPokemon
 } from './catElementos.js'
