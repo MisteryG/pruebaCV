@@ -23,3 +23,7 @@ Instalar los modulos de node por medio de npm i.<br>
 ### `redux`
 
 Se cuenta con una store con actions, reducers.<br>
+
+### `completo`
+
+Aqui se encuentra con lo faltante de la segunda tabla y el local storage.<br>
