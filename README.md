@@ -23,3 +23,7 @@ Instalar los modulos de node por medio de npm i.<br>
 ### `redux`
 
 Se cuenta con una store con actions, reducers.<br>
+
+### `otro branch`
+
+Se cuenta con una branch donde estan las caracteristicas que faltaban con el nombre pokemon completo.<br>
