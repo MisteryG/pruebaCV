@@ -3,6 +3,7 @@ import * as actionTypes from '../actions/actionTypes.js'
 const initialState = {
     findMovWord:'',
     favoritePokemon : [],
+    favoritePokemon: localStorage.getItem("pokedex") !== null ? JSON.parse(localStorage.getItem("pokedex")) : [],
     pokemon: {}
 }
 
@@ -19,7 +20,8 @@ const reducer = (state=initialState, action) => {
                 pokemon:{}
             }
         case actionTypes.ADD_POKEMON:
-            localStorage.setItem("pokedex", action.value)
+            localStorage.clear();
+            localStorage.setItem("pokedex", JSON.stringify(action.value))
             return {
                 ...state,
                 favoritePokemon:action.value
